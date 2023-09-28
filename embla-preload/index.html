@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      main {
+        overflow: visible;
+        --gap: 10px;
+        --slides: 2;
+      }
+
+      .container {
+        width: 1024px;
+        height: 100vh;
+        max-width: 80%;
+        background: rgba(255, 0, 0, 0.204);
+        margin: auto;
+      }
+
+      .embla__container {
+        display: flex;
+        justify-items: start;
+        gap: var(--gap);
+      }
+
+      .embla__slide {
+        min-width: 0;
+        flex: 0 0
+          calc(
+            (100% - var(--gap, 0) * (var(--slides, 1) - 1)) / var(--slides, 1)
+          );
+      }
+    </style>
+  </head>
+  <body>
+    <div style="overflow: hidden">
+      <main class="embla container">
+        <div class="embla__container">
+          <div class="embla__slide">hello 1</div>
+          <div class="embla__slide">hello 2</div>
+          <div class="embla__slide">hello 3</div>
+          <div class="embla__slide">hello 4</div>
+          <div class="embla__slide">hello 5</div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
